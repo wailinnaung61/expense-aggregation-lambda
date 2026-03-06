@@ -136,11 +136,11 @@ public class AggregationService
             expressionAttributeNames["#expense"] = "expense";
             context.Logger.LogInformation($"[UpdateAggAsync] Type: EXPENSE, Amount change: {amount}");
         }
-        else if (item.Type == "SAVING")
+        else if (item.Type == "SAVINGS")
         {
             updateExpression.Add("#saving = if_not_exists(#saving, :zero) + :amount");
             expressionAttributeNames["#saving"] = "saving";
-            context.Logger.LogInformation($"[UpdateAggAsync] Type: SAVING, Amount change: {amount}");
+            context.Logger.LogInformation($"[UpdateAggAsync] Type: SAVINGS, Amount change: {amount}");
         }
         else if (item.Type == "INVESTMENT")
         {
@@ -219,15 +219,15 @@ public class AggregationService
 
         var (periodStart, periodEnd) = GetSalaryMonthPeriod(item.Date);
 
-        var updateExpression = new List<string>
-        {
-            "#totalAmount = if_not_exists(#totalAmount, :zero) + :amount",
-            "#tranactionCount = if_not_exists(#tranactionCount, :zero) + :direction",
-            "#categoryId = if_not_exists(#categoryId, :categoryId)",
-            "#period = if_not_exists(#period, :period)",
-            "#periodStart = if_not_exists(#periodStart, :periodStart)",
-            "#periodEnd = if_not_exists(#periodEnd, :periodEnd)"
-        };
+            var updateExpression = new List<string>
+            {
+                "#totalAmount = if_not_exists(#totalAmount, :zero) + :amount",
+                "#tranactionCount = if_not_exists(#tranactionCount, :zero) + :direction",
+                "#categoryId = if_not_exists(#categoryId, :categoryId)",
+                "#period = if_not_exists(#period, :period)",
+                "#periodStart = if_not_exists(#periodStart, :periodStart)",
+                "#periodEnd = if_not_exists(#periodEnd, :periodEnd)"
+            };
 
         var request = new UpdateItemRequest
         {

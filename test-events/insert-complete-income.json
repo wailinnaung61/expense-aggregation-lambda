@@ -20,7 +20,7 @@
           "amount": { "N": "5000" },
           "categoryId": { "S": "salary-cat-id" },
           "date": { "S": "2026-03-01" },
-          "paymentStatus": { "S": "COMPLETE" },
+          "paymentStatus": { "S": "COMPLETED" },
           "createdAt": { "S": "2026-03-01T10:00:00.000Z" },
           "updatedAt": { "S": "2026-03-01T10:00:00.000Z" },
           "GSI1PK": { "S": "USER#d4382468-20d1-70b8-7e7f-cebdd6544daf#STATUS#COMPLETE" },
