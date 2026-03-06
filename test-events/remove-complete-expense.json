@@ -1,0 +1,37 @@
+{
+  "Records": [
+    {
+      "eventID": "4",
+      "eventName": "REMOVE",
+      "eventVersion": "1.0",
+      "eventSource": "aws:dynamodb",
+      "awsRegion": "us-east-1",
+      "dynamodb": {
+        "Keys": {
+          "PK": { "S": "USER#d4382468-20d1-70b8-7e7f-cebdd6544daf" },
+          "SK": { "S": "TXN#deleted-txn-id" }
+        },
+        "OldImage": {
+          "PK": { "S": "USER#d4382468-20d1-70b8-7e7f-cebdd6544daf" },
+          "SK": { "S": "TXN#deleted-txn-id" },
+          "userId": { "S": "d4382468-20d1-70b8-7e7f-cebdd6544daf" },
+          "tranactionId": { "S": "deleted-txn-id" },
+          "type": { "S": "EXPENSE" },
+          "amount": { "N": "250" },
+          "categoryId": { "S": "f05b3eb6-0035-4160-97af-3915b2876230" },
+          "date": { "S": "2026-03-02" },
+          "paymentStatus": { "S": "COMPLETE" },
+          "createdAt": { "S": "2026-03-02T14:00:00.000Z" },
+          "updatedAt": { "S": "2026-03-02T14:00:00.000Z" },
+          "GSI1PK": { "S": "USER#d4382468-20d1-70b8-7e7f-cebdd6544daf#STATUS#COMPLETE" },
+          "GSI1SK": { "S": "TYPE#EXPENSE#DATE#2026-03-02" },
+          "GSI2PK": { "S": "USER#d4382468-20d1-70b8-7e7f-cebdd6544daf#MONTH#2026-03" },
+          "GSI2SK": { "S": "TYPE#EXPENSE#DATE#2026-03-02" }
+        },
+        "SequenceNumber": "444",
+        "SizeBytes": 500,
+        "StreamViewType": "NEW_AND_OLD_IMAGES"
+      }
+    }
+  ]
+}

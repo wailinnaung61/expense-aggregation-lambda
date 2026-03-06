@@ -1,0 +1,54 @@
+{
+  "Records": [
+    {
+      "eventID": "2",
+      "eventName": "MODIFY",
+      "eventVersion": "1.0",
+      "eventSource": "aws:dynamodb",
+      "awsRegion": "us-east-1",
+      "dynamodb": {
+        "Keys": {
+          "PK": { "S": "USER#d4382468-20d1-70b8-7e7f-cebdd6544daf" },
+          "SK": { "S": "TXN#b466eb8f-9ca0-4a13-b63d-9540d170d455" }
+        },
+        "OldImage": {
+          "PK": { "S": "USER#d4382468-20d1-70b8-7e7f-cebdd6544daf" },
+          "SK": { "S": "TXN#b466eb8f-9ca0-4a13-b63d-9540d170d455" },
+          "userId": { "S": "d4382468-20d1-70b8-7e7f-cebdd6544daf" },
+          "tranactionId": { "S": "b466eb8f-9ca0-4a13-b63d-9540d170d455" },
+          "type": { "S": "EXPENSE" },
+          "amount": { "N": "1000" },
+          "categoryId": { "S": "f05b3eb6-0035-4160-97af-3915b2876230" },
+          "date": { "S": "2026-03-03" },
+          "paymentStatus": { "S": "PENDING" },
+          "createdAt": { "S": "2026-03-03T08:04:24.527Z" },
+          "updatedAt": { "S": "2026-03-03T08:04:24.529Z" },
+          "GSI1PK": { "S": "USER#d4382468-20d1-70b8-7e7f-cebdd6544daf#STATUS#PENDING" },
+          "GSI1SK": { "S": "TYPE#EXPENSE#DATE#2026-03-03" },
+          "GSI2PK": { "S": "USER#d4382468-20d1-70b8-7e7f-cebdd6544daf#MONTH#2026-03-03" },
+          "GSI2SK": { "S": "TYPE#EXPENSE#DATE#2026-03-03" }
+        },
+        "NewImage": {
+          "PK": { "S": "USER#d4382468-20d1-70b8-7e7f-cebdd6544daf" },
+          "SK": { "S": "TXN#b466eb8f-9ca0-4a13-b63d-9540d170d455" },
+          "userId": { "S": "d4382468-20d1-70b8-7e7f-cebdd6544daf" },
+          "tranactionId": { "S": "b466eb8f-9ca0-4a13-b63d-9540d170d455" },
+          "type": { "S": "EXPENSE" },
+          "amount": { "N": "1000" },
+          "categoryId": { "S": "f05b3eb6-0035-4160-97af-3915b2876230" },
+          "date": { "S": "2026-03-03" },
+          "paymentStatus": { "S": "COMPLETE" },
+          "createdAt": { "S": "2026-03-03T08:04:24.527Z" },
+          "updatedAt": { "S": "2026-03-03T08:10:15.123Z" },
+          "GSI1PK": { "S": "USER#d4382468-20d1-70b8-7e7f-cebdd6544daf#STATUS#COMPLETE" },
+          "GSI1SK": { "S": "TYPE#EXPENSE#DATE#2026-03-03" },
+          "GSI2PK": { "S": "USER#d4382468-20d1-70b8-7e7f-cebdd6544daf#MONTH#2026-03-03" },
+          "GSI2SK": { "S": "TYPE#EXPENSE#DATE#2026-03-03" }
+        },
+        "SequenceNumber": "222",
+        "SizeBytes": 550,
+        "StreamViewType": "NEW_AND_OLD_IMAGES"
+      }
+    }
+  ]
+}

@@ -11,5 +11,9 @@
   "function-runtime": "dotnet10",
   "function-memory-size": 512,
   "function-timeout": 30,
-  "function-handler": "ExpenseAggregationLambda::ExpenseAggregationLambda.Function::FunctionHandler"
+  "function-handler": "ExpenseAggregationLambda::ExpenseAggregationLambda.Function::FunctionHandler",
+  "function-name": "ExpenseAggregationLambda",
+  "function-architecture": "x86_64",
+  "function-role": "",
+  "function-description": "Lambda function to aggregate expense transactions from DynamoDB Stream"
 }

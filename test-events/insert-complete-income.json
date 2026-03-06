@@ -1,0 +1,37 @@
+{
+  "Records": [
+    {
+      "eventID": "3",
+      "eventName": "INSERT",
+      "eventVersion": "1.0",
+      "eventSource": "aws:dynamodb",
+      "awsRegion": "us-east-1",
+      "dynamodb": {
+        "Keys": {
+          "PK": { "S": "USER#d4382468-20d1-70b8-7e7f-cebdd6544daf" },
+          "SK": { "S": "TXN#c1234567-1111-2222-3333-444444444444" }
+        },
+        "NewImage": {
+          "PK": { "S": "USER#d4382468-20d1-70b8-7e7f-cebdd6544daf" },
+          "SK": { "S": "TXN#c1234567-1111-2222-3333-444444444444" },
+          "userId": { "S": "d4382468-20d1-70b8-7e7f-cebdd6544daf" },
+          "tranactionId": { "S": "c1234567-1111-2222-3333-444444444444" },
+          "type": { "S": "INCOME" },
+          "amount": { "N": "5000" },
+          "categoryId": { "S": "salary-cat-id" },
+          "date": { "S": "2026-03-01" },
+          "paymentStatus": { "S": "COMPLETE" },
+          "createdAt": { "S": "2026-03-01T10:00:00.000Z" },
+          "updatedAt": { "S": "2026-03-01T10:00:00.000Z" },
+          "GSI1PK": { "S": "USER#d4382468-20d1-70b8-7e7f-cebdd6544daf#STATUS#COMPLETE" },
+          "GSI1SK": { "S": "TYPE#INCOME#DATE#2026-03-01" },
+          "GSI2PK": { "S": "USER#d4382468-20d1-70b8-7e7f-cebdd6544daf#MONTH#2026-03" },
+          "GSI2SK": { "S": "TYPE#INCOME#DATE#2026-03-01" }
+        },
+        "SequenceNumber": "333",
+        "SizeBytes": 520,
+        "StreamViewType": "NEW_AND_OLD_IMAGES"
+      }
+    }
+  ]
+}

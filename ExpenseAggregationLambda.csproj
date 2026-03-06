@@ -11,12 +11,16 @@
     <PublishReadyToRun>true</PublishReadyToRun>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove=".github\**" />
+    <EmbeddedResource Remove=".github\**" />
+    <None Remove=".github\**" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Amazon.Lambda.Core" Version="2.8.0" />
     <PackageReference Include="Amazon.Lambda.Serialization.SystemTextJson" Version="2.4.4" />
     <PackageReference Include="Amazon.Lambda.DynamoDBEvents" Version="3.1.1" />
-    <PackageReference Include="AWSSDK.DynamoDBv2" Version="4.0.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include=".github\upgrades\scenarios\new-dotnet-version_28f393\" />
+    <PackageReference Include="Amazon.Lambda.TestUtilities" Version="3.0.1" />
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="4.0.15" />
+    <PackageReference Include="xunit" Version="2.6.5" />
   </ItemGroup>
 </Project>
